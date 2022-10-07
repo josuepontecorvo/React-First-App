@@ -1,10 +1,36 @@
 import React from 'react'
+import SmallCard from './SmallCard'
+
+const cards = [
+    {
+        title:"Movies in Data Base",
+        quantity:21,
+        icon:"fa-film",
+        color:"primary"
+    },
+    {
+        title:"Total awards",
+        quantity:79,
+        icon:"fa-award",
+        color:"success"
+    },
+    {
+        title:"Actors quantity",
+        quantity:49,
+        icon:"fa-user",
+        color:"warning"
+    }
+]
 
 export default function ContentRowMovies() {
   return (
     <div className="row">
         {/* <!-- Movies in Data Base --> */}
-        <div className="col-md-4 mb-4">
+        {cards.map((card,i) => {
+            return <SmallCard {...card} key={i}/>
+        })}
+        
+        {/* <div className="col-md-4 mb-4">
             <div className="card border-left-primary shadow h-100 py-2">
                 <div className="card-body">
                     <div className="row no-gutters align-items-center">
@@ -18,10 +44,10 @@ export default function ContentRowMovies() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
 
         {/* <!-- Total awards --> */}
-        <div className="col-md-4 mb-4">
+        {/* <div className="col-md-4 mb-4">
             <div className="card border-left-success shadow h-100 py-2">
                 <div className="card-body">
                     <div className="row no-gutters align-items-center">
@@ -35,10 +61,10 @@ export default function ContentRowMovies() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
 
         {/* <!-- Actors quantity --> */}
-        <div className="col-md-4 mb-4">
+        {/* <div className="col-md-4 mb-4">
             <div className="card border-left-warning shadow h-100 py-2">
                 <div className="card-body">
                     <div className="row no-gutters align-items-center">
@@ -53,7 +79,7 @@ export default function ContentRowMovies() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
     </div>
   )
 }

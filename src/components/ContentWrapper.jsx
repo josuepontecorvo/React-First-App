@@ -1,6 +1,7 @@
 import React from 'react'
 import ContentRowtop from './ContentRowtop'
 import Footer from './Footer'
+import Table from './Table'
 import TopBar from './TopBar'
 
 export default function ContentWrapper() {
@@ -14,10 +15,16 @@ export default function ContentWrapper() {
             {/* <!-- Content Row Top --> */}
                 <ContentRowtop/>
             {/* <!--End Content Row Top--> */}
+                <div className="row">
+                    <div className='card col-lg-10 mb-4 mx-auto'>
+                        <Table/>
+                    </div>
+                </div>
             </div>
 			{/* <!-- End of MainContent --> */}
+            
 			{/* <!-- Footer --> */}
-                <Footer/>
+            <Footer/>
 			{/* <!-- End of Footer --> */}
 		</div>
   )
